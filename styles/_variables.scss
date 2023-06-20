@@ -6,7 +6,7 @@ $orange: #D57242;
 
 @font-face{
   font-family: 'pp formula';
-  src: url('../fonts/ppformula-Medium.otf') format('opentype');
+  src: url('../fonts/PPFormula-Medium.otf') format('opentype');
 }
 
 @font-face {
@@ -14,6 +14,6 @@ $orange: #D57242;
   src: url('../fonts/Groovy-Extended.ttf') format('truetype');
 }
 
-$fontPP: 'pp formula', sans-serif;
+$fontPP: 'pp formula'/* , sans-serif */;
 $fontGroovy: 'groovy-extended', sans-serif;
 $fontMontserrat: 'Montserrat', sans-serif;

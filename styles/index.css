@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 @font-face {
   font-family: "pp formula";
-  src: url("../fonts/ppformula-Medium.otf") format("opentype");
+  src: url("../fonts/PPFormula-Medium.otf") format("opentype");
 }
 @font-face {
   font-family: "groovy-extended";
@@ -11,4 +11,22 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  width: min(100%, 1760px);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=index.css.map */
