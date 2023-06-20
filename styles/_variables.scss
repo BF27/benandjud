@@ -1,0 +1,19 @@
+
+
+$green:#CBE765;
+$pink: #F19BE3;
+$orange: #D57242;
+
+@font-face{
+  font-family: 'pp formula';
+  src: url('../fonts/ppformula-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'groovy-extended';
+  src: url('../fonts/Groovy-Extended.ttf') format('truetype');
+}
+
+$fontPP: 'pp formula', sans-serif;
+$fontGroovy: 'groovy-extended', sans-serif;
+$fontMontserrat: 'Montserrat', sans-serif;

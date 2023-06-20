@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+@font-face {
+  font-family: "pp formula";
+  src: url("../fonts/ppformula-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "groovy-extended";
+  src: url("../fonts/Groovy-Extended.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=index.css.map */
