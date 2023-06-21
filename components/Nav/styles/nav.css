@@ -6,15 +6,9 @@
   font-family: "groovy-extended";
   src: url("../fonts/Groovy-Extended.ttf") format("truetype");
 }
-nav {
-  display: flex;
-  align-items: center;
-}
 nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
   list-style: none;
+  margin: 0;
 }
 nav ul li a {
   display: block;
@@ -23,7 +17,7 @@ nav ul li a {
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
-  font-size: 2rem;
+  font-size: 1rem;
   transition: 0.45s;
 }
 nav ul li a:hover {
