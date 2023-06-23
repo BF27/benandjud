@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "pp formula";
+  src: url("../fonts/PPFormula-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "groovy-extended";
+  src: url("../fonts/Groovy-Extended.ttf") format("truetype");
+}
+.amount-counter {
+  border: 2px solid #000;
+  border-radius: 100px;
+  padding: 0.5rem;
+}
+.amount-counter span.amount {
+  font-family: "Montserrat", sans-serif;
+}
+.amount-counter button {
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #F19BE3;
+  height: 25px;
+  width: 25px;
+  transition: all 0.3s ease-in-out;
+}
+.amount-counter button:hover {
+  border: 1px solid #000;
+}/*# sourceMappingURL=amountCounter.css.map */

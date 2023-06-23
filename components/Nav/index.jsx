@@ -2,7 +2,7 @@ import "./styles/nav.css";
 
 const Nav = () => {
   return (
-    <nav className="d-flex align-items-center">
+    <nav className="d-lg-flex desktop-nav d-none align-items-center" >
       <ul
         className="d-flex align-items-center
       justify-content-center gap-5"

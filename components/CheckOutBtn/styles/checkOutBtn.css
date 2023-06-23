@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "pp formula";
+  src: url("../fonts/PPFormula-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "groovy-extended";
+  src: url("../fonts/Groovy-Extended.ttf") format("truetype");
+}
+.check-out-btn {
+  background-color: #f19be3;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border: 2px solid #f19be3;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+.check-out-btn:hover {
+  border: 2px solid #f19be3;
+}
+.check-out-btn .divider {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  background-color: #CBE765;
+}/*# sourceMappingURL=checkOutBtn.css.map */

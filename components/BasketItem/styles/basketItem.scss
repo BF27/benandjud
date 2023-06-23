@@ -1,0 +1,17 @@
+@use "../../../styles/variables" as v;
+
+.basket-item {
+  h4 {
+    font-family: v.$fontGroovy;
+  }
+  border-bottom: 2px solid #000;
+  margin: 0 1rem;
+  .remove {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "pp formula";
+  src: url("../fonts/PPFormula-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "groovy-extended";
+  src: url("../fonts/Groovy-Extended.ttf") format("truetype");
+}
+.basket-item {
+  border-bottom: 2px solid #000;
+  margin: 0 1rem;
+}
+.basket-item h4 {
+  font-family: "groovy-extended", sans-serif;
+}
+.basket-item .remove {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.basket-item .remove:hover {
+  text-decoration: none;
+}/*# sourceMappingURL=basketItem.css.map */

@@ -1,1 +1,36 @@
-/*# sourceMappingURL=basket.css.map */
+@font-face {
+  font-family: "pp formula";
+  src: url("../fonts/PPFormula-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "groovy-extended";
+  src: url("../fonts/Groovy-Extended.ttf") format("truetype");
+}
+.basket {
+  width: 15vw;
+  background-color: #ffecbc;
+}
+.basket .basket-title {
+  font-family: "pp formula";
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: calc(0.8rem + 0.5vw);
+  margin: 0;
+}
+.basket .transparent-color {
+  color: #ffecbc;
+}
+.basket .basket-dropdown {
+  position: absolute;
+  top: 75%;
+  right: 0;
+  padding: 2rem 1rem;
+  width: min(100%, 300px);
+  z-index: 1000;
+  background-color: #ffecbc;
+  border-radius: 0 0 2rem 2rem;
+}
+.basket .basket-list {
+  padding: 0;
+  list-style-type: none;
+}/*# sourceMappingURL=basket.css.map */

@@ -6,11 +6,11 @@
   font-family: "groovy-extended";
   src: url("../fonts/Groovy-Extended.ttf") format("truetype");
 }
-nav ul {
+.desktop-nav ul {
   list-style: none;
   margin: 0;
 }
-nav ul li a {
+.desktop-nav ul li a {
   display: block;
   font-family: "pp formula";
   font-weight: 400;
@@ -20,6 +20,6 @@ nav ul li a {
   font-size: 1rem;
   transition: 0.45s;
 }
-nav ul li a:hover {
+.desktop-nav ul li a:hover {
   transform: translateY(-15px);
 }/*# sourceMappingURL=nav.css.map */
