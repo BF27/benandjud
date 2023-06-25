@@ -1,0 +1,23 @@
+@use "../../../styles/variables" as v;
+
+.shop {
+  margin-top: 3.5rem;
+  background-color: v.$pink;
+
+  h2 {
+    font-family: v.$fontPP;
+    font-weight: 700;
+    font-size: 6rem;
+    text-transform: uppercase;
+    top: -3rem;
+    position: relative;
+  }
+}
+@media screen and (max-width: 768px) {
+  .shop {
+    h2{
+      font-size: 4rem;
+      top: -2rem;
+    }
+  }
+}
