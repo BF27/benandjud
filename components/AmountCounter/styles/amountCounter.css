@@ -15,7 +15,7 @@
   font-family: "Montserrat", sans-serif;
 }
 .amount-counter button {
-  font-size: 1rem;
+  font-size: 2rem;
   cursor: pointer;
   border-radius: 50%;
   background-color: #F19BE3;
@@ -25,4 +25,5 @@
 }
 .amount-counter button:hover {
   border: 1px solid #000;
+  background: transparent;
 }/*# sourceMappingURL=amountCounter.css.map */

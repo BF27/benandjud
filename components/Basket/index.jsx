@@ -1,18 +1,19 @@
 import showBasket from "./controllers/showBasket";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { BasketContext } from "../../src/App";
 import BasketItem from "../BasketItem";
 import CheckOutBtn from "../CheckOutBtn";
+
 
 import "./styles/basket.css";
 
 const Basket = () => {
-  const [basket, setBasket] = useState(null);
+  const basket = useContext(BasketContext);
+
+  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
-    setBasket([
-      { name: "orange lemonade", price: 7600, amount: 1 },
-      { name: "Cartoon Network", price: 7600, amount: 2 },
-    ]);
+    
   }, []);
 
   return (
@@ -49,7 +50,7 @@ const Basket = () => {
             />
           ))}
         </ul>
-        <CheckOutBtn totalPrice={7600} />
+        <CheckOutBtn totalPrice={totalPrice} />
       </div>
     </div>
   );

@@ -1,0 +1,48 @@
+@use "../../../styles/variables" as v;
+
+.product-card {
+  border: 3px solid #000;
+  border-radius: 2.5rem;
+  padding: 3rem 2rem;
+  max-width: 490px;
+
+  img {
+    max-width: 200px;
+  }
+
+
+  h3{
+    font-family: v.$fontGroovy;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+
+  p {
+    text-align: justify;
+    font-family: v.$fontMontserrat;
+    font-weight: 500;
+  }
+
+  .amount-counter {
+    width: 100%;
+  }
+
+  .product-card-button {
+    width: 100%;
+    background-color: v.$pink;
+    border-radius: 100px;
+    text-align: left;
+
+    font-family: v.$fontMontserrat;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid v.$pink;
+    }
+  }
+}

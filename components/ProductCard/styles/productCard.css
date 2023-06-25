@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "pp formula";
+  src: url("../fonts/PPFormula-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "groovy-extended";
+  src: url("../fonts/Groovy-Extended.ttf") format("truetype");
+}
+.product-card {
+  border: 3px solid #000;
+  border-radius: 2.5rem;
+  padding: 3rem 2rem;
+  max-width: 490px;
+}
+.product-card img {
+  max-width: 200px;
+}
+.product-card h3 {
+  font-family: "groovy-extended", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+.product-card p {
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.product-card .amount-counter {
+  width: 100%;
+}
+.product-card .product-card-button {
+  width: 100%;
+  background-color: #F19BE3;
+  border-radius: 100px;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+.product-card .product-card-button:hover {
+  background-color: transparent;
+  border: 1px solid #F19BE3;
+}/*# sourceMappingURL=productCard.css.map */

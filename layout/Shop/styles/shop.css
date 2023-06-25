@@ -8,7 +8,8 @@
 }
 .shop {
   margin-top: 3.5rem;
-  background-color: #F19BE3;
+  padding-bottom: 3.5rem;
+  background: linear-gradient(222deg, #F0C5EE 46.88%, rgba(228, 184, 227, 0) 100%);
 }
 .shop h2 {
   font-family: "pp formula", sans-serif;
@@ -17,6 +18,9 @@
   text-transform: uppercase;
   top: -3rem;
   position: relative;
+}
+.shop .product-card-container {
+  overflow-x: auto;
 }
 
 @media screen and (max-width: 768px) {
