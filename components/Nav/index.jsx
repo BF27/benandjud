@@ -5,9 +5,9 @@ const Nav = () => {
     <nav className="d-lg-flex desktop-nav d-none align-items-center" >
       <ul
         className="d-flex align-items-center
-      justify-content-center gap-5"
+      justify-content-center"
       >
-        <li>
+        <li className="title">
           <a href="#">Shop</a>
         </li>
         <li>

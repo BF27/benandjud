@@ -26,7 +26,7 @@
 }
 .mobile-nav .mobile-menu .mobile-menu-item a {
   display: block;
-  font-family: "pp formula";
+  font-family: "pp formula", sans-serif;
   font-weight: 400;
   text-decoration: none;
   text-transform: uppercase;

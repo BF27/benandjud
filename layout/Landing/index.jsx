@@ -1,3 +1,4 @@
+import HeroSection from "../../components/HeroSection";
 import TopBar from "../../components/TopBar";
 
 import "./styles/landing.css"
@@ -7,6 +8,7 @@ const Landing = () => {
     <section id="landing" className="landing">
       <div className="container">
         <TopBar />
+        <HeroSection />
       </div>
     </section>
   );

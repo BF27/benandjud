@@ -1,0 +1,50 @@
+@use "../../../styles/variables" as v;
+
+.hero-section {
+  padding-left: 0;
+  padding-right: 0;
+  .hero-text {
+    //width: 50%;
+    h2{
+      position: relative;
+      z-index: 100;
+      font-family: v.$fontPP;
+      font-weight: 700;
+      font-size: calc(1.5rem + 1vw);
+      text-transform:uppercase;
+      color: #000;
+    }
+
+    p {
+      position: relative;
+      z-index: 100;
+      font-weight: 500;
+    }
+    .flower-icon {
+      position: absolute;
+      top: -80px;
+      right: 70px;
+      z-index: 1;
+
+      max-width: 182px;
+      height: auto;
+    }
+  }
+
+  .hero-image {
+    //width: 50%;
+    .hero-image-container {
+      overflow: hidden;
+      max-width: 580px;
+      max-height: 590px;
+      border-radius: 2.5rem;
+      box-shadow: 0px 4px 25px 10px rgba(0, 0, 0, 0.19);
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+    
+  }
+}
