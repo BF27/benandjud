@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "pp formula";
+  src: url("../fonts/PPFormula-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "groovy-extended";
+  src: url("../fonts/Groovy-Extended.ttf") format("truetype");
+}
+.contact {
+  background-color: #CBE765;
+  padding-bottom: 5rem;
+}
+.contact header h2 {
+  font-family: "pp formula", sans-serif;
+  font-weight: 700;
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.contact div form {
+  border: 3px solid #000;
+  border-radius: 2.5rem;
+  box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.25);
+  width: min(100%, 730px);
+}
+.contact div form label {
+  width: 100%;
+}
+.contact div form input,
+.contact div form textarea {
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 2rem;
+  outline: 0;
+  border: 2px solid #000;
+  padding: 1rem 1.5rem;
+  background-color: #E8F4BA;
+}
+.contact div form input::-moz-placeholder, .contact div form textarea::-moz-placeholder {
+  color: #000;
+  font-family: "pp formula", sans-serif;
+}
+.contact div form input::placeholder,
+.contact div form textarea::placeholder {
+  color: #000;
+  font-family: "pp formula", sans-serif;
+}
+.contact div form textarea {
+  resize: none;
+  height: 200px;
+}
+.contact div form .form-submit-btn {
+  background: #F19BE3;
+  border-radius: 2rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .contact header h2 {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=contact.css.map */

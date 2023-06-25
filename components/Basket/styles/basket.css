@@ -7,7 +7,7 @@
   src: url("../fonts/Groovy-Extended.ttf") format("truetype");
 }
 .basket {
-  width: 15vw;
+  width: 10vw;
   background-color: #ffecbc;
 }
 .basket .basket-title {

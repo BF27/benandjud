@@ -10,7 +10,7 @@
   border: 3px solid #000;
   border-radius: 2.5rem;
   padding: 3rem 2rem;
-  max-width: 490px;
+  width: min(100%, 600px);
 }
 .product-card img {
   max-width: 200px;
@@ -19,6 +19,7 @@
   font-family: "groovy-extended", sans-serif;
   text-transform: uppercase;
   font-size: 1.5rem;
+  white-space: nowrap;
 }
 .product-card p {
   text-align: justify;
@@ -42,4 +43,10 @@
 .product-card .product-card-button:hover {
   background-color: transparent;
   border: 1px solid #F19BE3;
+}
+
+@media screen and (max-width: 576px) {
+  .product-card h3 {
+    white-space: normal;
+  }
 }/*# sourceMappingURL=productCard.css.map */

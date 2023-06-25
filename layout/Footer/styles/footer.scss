@@ -1,0 +1,15 @@
+@use "../../../styles/variables" as v;
+
+.footer {
+  background-color: v.$green;
+
+  .footer-container {
+    img{
+      max-width: 190px;
+    }
+    p {
+      color: #000;
+      font-family: v.$fontMontserrat;
+    }
+  }
+}

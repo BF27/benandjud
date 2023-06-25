@@ -12,7 +12,7 @@
 
 .about {
   background-color: #CBE765;
-  padding: 2rem 0;
+  padding: 2rem 0 0 0;
 }
 .about header {
   background: url("/img/about-header.jpg") center/cover no-repeat;
