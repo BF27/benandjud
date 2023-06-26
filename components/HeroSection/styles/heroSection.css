@@ -44,4 +44,10 @@
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media screen and (max-width: 992px) {
+  .hero-section .hero-text p {
+    text-align: justify;
+  }
 }/*# sourceMappingURL=heroSection.css.map */

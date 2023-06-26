@@ -53,6 +53,11 @@
   background: #F19BE3;
   border-radius: 2rem;
   width: 100%;
+  transition: all 0.45s ease;
+}
+.contact div form .form-submit-btn:hover {
+  background: transparent;
+  border: 1px solid #F19BE3;
 }
 
 @media screen and (max-width: 768px) {

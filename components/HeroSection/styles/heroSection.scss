@@ -5,15 +5,14 @@
   padding-right: 0;
   .hero-text {
     //width: 50%;
-    h2{
+    h2 {
       position: relative;
       z-index: 100;
       font-family: v.$fontPP;
       font-weight: 900;
       font-size: calc(1.5rem + 1vw);
-      text-transform:uppercase;
+      text-transform: uppercase;
       color: #000;
-      //
     }
 
     p {
@@ -46,6 +45,15 @@
         object-fit: cover;
       }
     }
-    
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero-section {
+    .hero-text {
+      p {
+        text-align: justify;
+      }
+    }
   }
 }

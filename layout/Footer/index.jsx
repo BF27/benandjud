@@ -2,7 +2,7 @@ import "./styles/footer.css";
 
 const Footer = () => {
   return (
-    <footer id="footer" className="footer container-fluid row">
+    <footer id="footer" className="footer container-fluid">
       <div className="container">
         <div className="footer-container d-flex flex-column-reverse align-items-center flex-md-row  gap-3 gap-md-5 p-3">
           <img src="/svg/logo-01.svg" alt="logo" className="col" />

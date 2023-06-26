@@ -44,6 +44,12 @@
         background: v.$pink;
         border-radius: 2rem;
         width: 100%;
+        transition: all 0.45s ease;
+
+        &:hover {
+          background: transparent;
+          border: 1px solid v.$pink;
+        }
       }
     }
   }
