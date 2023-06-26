@@ -22,7 +22,7 @@
   white-space: nowrap;
 }
 .product-card p {
-  text-align: justify;
+  text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
