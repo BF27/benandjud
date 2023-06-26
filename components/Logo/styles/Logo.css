@@ -2,5 +2,7 @@
   width: 10vw;
 }
 .logo img {
+  position: relative;
+  z-index: 9999;
   width: 73px;
 }/*# sourceMappingURL=Logo.css.map */

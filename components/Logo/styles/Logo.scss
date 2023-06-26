@@ -1,6 +1,8 @@
 .logo {
   width: 10vw;
   img {
+    position: relative;
+    z-index: 9999;
     width: 73px;
   }
 }

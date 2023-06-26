@@ -1,12 +1,9 @@
 import AmountCounter from "../AmountCounter";
-import addItemToBasket from "./controllers/addItemToBasket";
-import { useContext, useEffect, useState } from "react";
-import { BasketContext } from "../../src/App";
+import { useState } from "react";
 
 import "./styles/productCard.css";
 
 const ProductCard = ({ product }) => {
-  const basket = useContext(BasketContext);
   const [amount, setAmount] = useState(0);
 
   return (
@@ -20,7 +17,7 @@ const ProductCard = ({ product }) => {
       </p>
       <AmountCounter amount={amount} />
       <span className="product-card-price">{product.price} ft / 250g</span>
-      <button id={`add-item_${product.id}`} className="btn product-card-button" onClick={(event)=>addItemToBasket(event)}>
+      <button id={`add-item_${product.id}`} className="btn product-card-button" onClick={()=>console.log('clicked')}>
         Add to cart
       </button>
     </div>

@@ -1,20 +1,13 @@
 import showBasket from "./controllers/showBasket";
-import { useEffect, useState, useContext } from "react";
-import { BasketContext } from "../../src/App";
+import { useState } from "react";
 import BasketItem from "../BasketItem";
 import CheckOutBtn from "../CheckOutBtn";
-
 
 import "./styles/basket.css";
 
 const Basket = () => {
-  const basket = useContext(BasketContext);
-
   const [totalPrice, setTotalPrice] = useState(0);
-
-  useEffect(() => {
-    
-  }, []);
+  const [basket, setBasket] = useState([]);
 
   return (
     <div className="basket d-flex justify-content-center flex-column">
@@ -41,9 +34,9 @@ const Basket = () => {
       </header>
       <div className="basket-dropdown d-none d-flex flex-column justify-content-between align-items-center">
         <ul className="basket-list">
-          {basket?.map((item, i) => (
+          {basket?.map((item) => (
             <BasketItem
-              key={i}
+              key={item.id}
               name={item.name}
               price={item.price}
               amount={item.amount}
