@@ -7,9 +7,11 @@ const BasketItem = ({ id, name, price, imgUrl }) => {
   const [quantity, setQuantity] = useState(null);
 
   useEffect(() => {
-    const basketItem = basket.filter((item) => id === item.product.id);
-    console.log(basketItem);
-    setQuantity(basketItem[0].amount);
+    if (basket) {
+      const basketItem = basket.filter((item) => id === item.product.id);
+      console.log(basketItem);
+      setQuantity(basketItem[0].amount);
+    }
   }, []);
 
   return (
