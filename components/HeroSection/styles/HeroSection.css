@@ -13,8 +13,8 @@
 .hero-section .hero-text h2 {
   position: relative;
   z-index: 100;
-  font-family: "pp formula", sans-serif;
-  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
   font-size: calc(1.5rem + 1vw);
   text-transform: uppercase;
   color: #000;

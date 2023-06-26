@@ -7,10 +7,10 @@
 
   h2 {
     font-family: v.$fontPP;
-    font-weight: 700;
-    font-size: 6rem;
+    font-weight: 900;
+    font-size: 4rem;
     text-transform: uppercase;
-    top: -3rem;
+    top: -2.5rem;
     position: relative;
   }
   .product-card-container {
@@ -20,7 +20,7 @@
 @media screen and (max-width: 768px) {
   .shop {
     h2{
-      font-size: 4rem;
+      font-size: 3rem;
       top: -2rem;
     }
   }

@@ -11,9 +11,9 @@
   padding-bottom: 5rem;
 }
 .contact header h2 {
-  font-family: "pp formula", sans-serif;
-  font-weight: 700;
-  font-size: 6rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
   text-transform: uppercase;
   color: #fff;
 }
@@ -38,12 +38,12 @@
 }
 .contact div form input::-moz-placeholder, .contact div form textarea::-moz-placeholder {
   color: #000;
-  font-family: "pp formula", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .contact div form input::placeholder,
 .contact div form textarea::placeholder {
   color: #000;
-  font-family: "pp formula", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .contact div form textarea {
   resize: none;

@@ -12,11 +12,11 @@
   background: linear-gradient(222deg, #F0C5EE 46.88%, rgba(228, 184, 227, 0) 100%);
 }
 .shop h2 {
-  font-family: "pp formula", sans-serif;
-  font-weight: 700;
-  font-size: 6rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
   text-transform: uppercase;
-  top: -3rem;
+  top: -2.5rem;
   position: relative;
 }
 .shop .product-card-container {
@@ -25,7 +25,7 @@
 
 @media screen and (max-width: 768px) {
   .shop h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     top: -2rem;
   }
 }/*# sourceMappingURL=shop.css.map */
