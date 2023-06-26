@@ -8,10 +8,12 @@ const ProductCard = ({ product }) => {
 
   useEffect(()=> {
     const basket = JSON.parse(localStorage.getItem("basket"));
-    const thisProd = basket.filter((item)=> item.product.id === product.id);
-    if (thisProd.length > 0) {
-      const amountOfThisProd = thisProd[0].amount;
-      setAmount(amountOfThisProd);
+    if (basket) {
+      const thisProd = basket.filter((item)=> item.product.id === product.id);
+      if (thisProd.length > 0) {
+        const amountOfThisProd = thisProd[0].amount;
+        setAmount(amountOfThisProd);
+      }
     }
   },[]);
 

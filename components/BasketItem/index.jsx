@@ -7,6 +7,7 @@ const BasketItem = ({ id, name, price, imgUrl }) => {
   const [quantity, setQuantity] = useState(null);
 
   useEffect(() => {
+    console.log(basket)
     if (basket) {
       const basketItem = basket.filter((item) => id === item.product.id);
       console.log(basketItem);
