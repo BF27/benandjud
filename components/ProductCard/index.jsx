@@ -1,43 +1,57 @@
 import AmountCounter from "../AmountCounter";
-import { useEffect, useState } from "react";
+
+import { useEffect, useState, useContext } from "react";
+
+import { BasketContext } from "../../contexts/BasketContext";
+import { UpdateBasketContext } from "../../contexts/UpdateBasketContext";
 
 import "./styles/productCard.css";
 
 const ProductCard = ({ product }) => {
-  const [amount, setAmount] = useState(0);
+  const [quantity, setQuantity] = useState(0);
+  const basket = useContext(BasketContext);
+  const updateBasket = useContext(UpdateBasketContext);
 
-  useEffect(()=> {
-    const basket = JSON.parse(localStorage.getItem("basket"));
+  useEffect(() => {
     if (basket) {
-      const thisProd = basket.filter((item)=> item.product.id === product.id);
+      const thisProd = basket.filter((item) => item.product.id === product.id);
       if (thisProd.length > 0) {
         const amountOfThisProd = thisProd[0].amount;
-        setAmount(amountOfThisProd);
+        setQuantity(amountOfThisProd);
       }
     }
-  },[]);
+  }, []);
 
   const addToBasket = () => {
-    const lsBasket = JSON.parse(localStorage.getItem("basket"))
-    let newBasket 
+    let count = quantity;
+    const lsBasket = JSON.parse(localStorage.getItem("basket"));
+    let newBasket;
+
     if (lsBasket) {
       const thisProduct = lsBasket.filter(
         (item) => product.id === item.product.id
       );
       if (thisProduct[0]) {
-        const newAmount = amount + 1
-        setAmount(newAmount);
+        count++;
+        setQuantity(count);
       } else {
-        setAmount(1);
+        count++
+        setQuantity(count);
       }
       newBasket = lsBasket.filter((item) => product.id !== item.product.id);
     } else {
       newBasket = [];
-      setAmount(1);
+      count++
+      setQuantity(count)
     }
-    newBasket.push({ product: product, amount: amount });
+    newBasket.push({
+      product: product,
+      amount: count,
+    });
     localStorage.setItem("basket", JSON.stringify(newBasket));
+    updateBasket()
   };
+
   return (
     <div className="product-card d-flex flex-column align-items-center gap-3">
       <div className="product-card-image-container">
@@ -47,12 +61,14 @@ const ProductCard = ({ product }) => {
       <p className="product-card-short-description">
         {product.shortDescription}
       </p>
-      <AmountCounter amount={amount} />
+       <AmountCounter amount={quantity}/>
       <span className="product-card-price">{product.price} ft / 250g</span>
       <button
         id={`add-item_${product.id}`}
         className="btn product-card-button"
-        onClick={(event) => addToBasket(event)}
+        onClick={() => {
+          addToBasket();
+        }}
       >
         Add to cart
       </button>

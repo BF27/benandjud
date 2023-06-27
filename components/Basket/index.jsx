@@ -15,7 +15,7 @@ const Basket = () => {
   }, []);
 
   useEffect(()=>{
-    //console.log(basket)
+
   }, [basket])
 
   return (

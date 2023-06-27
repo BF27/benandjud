@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import AmountCounter from "../AmountCounter";
 import "./styles/basketItem.css";
+import { useContext } from "react";
+import { BasketContext } from "../../contexts/BasketContext";
 
 const BasketItem = ({ id, name, price, imgUrl }) => {
-  const basket = JSON.parse(localStorage.getItem("basket"));
-  const [quantity, setQuantity] = useState(null);
+  const basket = useContext(BasketContext);
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
-    console.log(basket)
     if (basket) {
       const basketItem = basket.filter((item) => id === item.product.id);
-      console.log(basketItem);
       setQuantity(basketItem[0].amount);
     }
   }, []);
@@ -22,7 +22,7 @@ const BasketItem = ({ id, name, price, imgUrl }) => {
       </div>
       <div className="basket-item-details">
         <h4 className="basket-item-name">{name}</h4>
-        {quantity && <AmountCounter amount={quantity} />}
+        <AmountCounter amount={quantity} />
         <div className="d-flex justify-content-between gap-5 pt-3">
           <span className="basket-item-price">{`${price * quantity}FT`}</span>
           <span id={`remove_${id}`} className="remove">
