@@ -43,13 +43,14 @@ const Basket = () => {
       </header>
       <div className="basket-dropdown d-none d-flex flex-column justify-content-between align-items-center">
         <ul className="basket-list">
-          {basket?.map((item) => (
+          {basket?.map((item,i) => (
             <BasketItem
-              key={item.product.id}
+              key={i}
               id= {item.product.id}
               name={item.product.title}
               price={item.product.price}
               imgUrl={item.product.imgUrl}
+              amount={item.amount}
             />
           ))}
         </ul>

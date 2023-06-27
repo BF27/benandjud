@@ -9,7 +9,7 @@ import { useState } from "react";
 
 function App() {
   const updateBasket = () => {
-    setBasket(JSON.parse(localStorage.getItem('basket')))
+    setBasket(JSON.parse(localStorage.getItem('basket')));
   };
 
   const [basket, setBasket] = useState(JSON.parse(localStorage.getItem('basket')));

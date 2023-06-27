@@ -9,6 +9,8 @@ import "./styles/productCard.css";
 
 const ProductCard = ({ product }) => {
   const [quantity, setQuantity] = useState(0);
+  const [render, setRender] = useState(false);
+
   const basket = useContext(BasketContext);
   const updateBasket = useContext(UpdateBasketContext);
 
@@ -17,11 +19,14 @@ const ProductCard = ({ product }) => {
       const thisProd = basket.filter((item) => item.product.id === product.id);
       if (thisProd.length > 0) {
         const amountOfThisProd = thisProd[0].amount;
+        console.log(amountOfThisProd)
         setQuantity(amountOfThisProd);
       }
     }
+    setRender(true);
   }, []);
 
+  
   const addToBasket = () => {
     let count = quantity;
     const lsBasket = JSON.parse(localStorage.getItem("basket"));
@@ -52,28 +57,30 @@ const ProductCard = ({ product }) => {
     updateBasket()
   };
 
-  return (
-    <div className="product-card d-flex flex-column align-items-center gap-3">
-      <div className="product-card-image-container">
-        <img src={product.imgUrl} />
+  if (render) {
+    return (
+      <div className="product-card d-flex flex-column align-items-center gap-3">
+        <div className="product-card-image-container">
+          <img src={product.imgUrl} />
+        </div>
+        <h3 className="product-card-title text-center">{product.title}</h3>
+        <p className="product-card-short-description">
+          {product.shortDescription}
+        </p>
+         <AmountCounter amount={quantity} id={product.id} />
+        <span className="product-card-price">{product.price} ft / 250g</span>
+        <button
+          id={`add-item_${product.id}`}
+          className="btn product-card-button"
+          onClick={() => {
+            addToBasket();
+          }}
+        >
+          Add to cart
+        </button>
       </div>
-      <h3 className="product-card-title text-center">{product.title}</h3>
-      <p className="product-card-short-description">
-        {product.shortDescription}
-      </p>
-       <AmountCounter amount={quantity}/>
-      <span className="product-card-price">{product.price} ft / 250g</span>
-      <button
-        id={`add-item_${product.id}`}
-        className="btn product-card-button"
-        onClick={() => {
-          addToBasket();
-        }}
-      >
-        Add to cart
-      </button>
-    </div>
-  );
+    );
+  }
 };
 
 export default ProductCard;
