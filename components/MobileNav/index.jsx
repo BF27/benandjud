@@ -25,13 +25,13 @@ const MobileNav = () => {
       </button>
       <ul className="mobile-menu hide">
         <li className="mobile-menu-item">
-          <a href="#">Shop</a>
+          <a href="#to-shop">Shop</a>
         </li>
         <li className="mobile-menu-item">
-          <a href="#">Our Story</a>
+          <a href="#about">Our Story</a>
         </li>
         <li className="mobile-menu-item">
-          <a href="#">Contact Us</a>
+          <a href="#contact">Contact Us</a>
         </li>
       </ul>
     </nav>

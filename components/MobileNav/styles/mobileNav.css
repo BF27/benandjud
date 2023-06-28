@@ -13,12 +13,12 @@
   background-color: #ffecbc;
   border: none;
   border-radius: 0 0 2rem 2rem;
-  margin: 2rem 1rem;
   overflow: hidden;
   position: absolute;
   right: 0;
-  top: 45%;
-  padding: 0;
+  top: 75%;
+  padding: 2rem 0rem;
+  z-index: 10000;
 }
 .mobile-nav .mobile-menu .mobile-menu-item {
   transition: all 0.45s ease;
@@ -27,7 +27,7 @@
 .mobile-nav .mobile-menu .mobile-menu-item a {
   display: block;
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
