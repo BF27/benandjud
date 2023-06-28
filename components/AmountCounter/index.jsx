@@ -3,16 +3,9 @@ import { BasketContext } from "../../contexts/BasketContext";
 import { UpdateBasketContext } from "../../contexts/UpdateBasketContext";
 import { useContext } from "react";
 
-const AmountCounter = ({product, quantity, id }) => {
+const AmountCounter = ({ product, quantity, id}) => {
   const basket = useContext(BasketContext);
   const updateBasket = useContext(UpdateBasketContext);
-
-
-  const removeFromBasket = () => {
-    const newBasket = basket.filter((item) => item.product.id !== id);
-    localStorage.setItem("basket", JSON.stringify(newBasket));
-    updateBasket();
-  };
 
   const handlePlus = () => {
     let contains = false;
@@ -24,7 +17,7 @@ const AmountCounter = ({product, quantity, id }) => {
       return item;
     });
     if (!contains) {
-      newBasket.push({product: product, amount: 1});
+      newBasket.push({ product: product, amount: 1 });
     }
     localStorage.setItem("basket", JSON.stringify(newBasket));
     updateBasket();
@@ -36,17 +29,17 @@ const AmountCounter = ({product, quantity, id }) => {
       if (item.product.id === id) {
         item.amount = quantity - 1;
         if (item.amount <= 0) {
-          deleteItem = true
+          deleteItem = true;
         }
       }
       return item;
     });
     if (deleteItem) {
-      newBasket = newBasket.filter(item => item.product.id !== id)
+      newBasket = newBasket.filter((item) => item.product.id !== id);
     }
     localStorage.setItem("basket", JSON.stringify(newBasket));
     updateBasket();
-  }
+  };
 
   return (
     <div className="amount-counter d-flex justify-content-between">

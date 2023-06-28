@@ -65,7 +65,7 @@ const ProductCard = ({ product }) => {
         <img src={product.imgUrl} />
       </div>
       <h3 className="product-card-title text-center">{product.title}</h3>
-      <p className="product-card-short-description">
+      <p className="product-card-short-description d-none d-sm-block">
         {product.shortDescription}
       </p>
       <AmountCounter product={product} id={product.id} quantity={quantity} />
