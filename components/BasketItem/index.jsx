@@ -1,7 +1,25 @@
 import AmountCounter from "../AmountCounter";
 import "./styles/basketItem.css";
+import { useContext } from "react";
+import { BasketContext } from "../../contexts/BasketContext";
+import { UpdateBasketContext } from "../../contexts/UpdateBasketContext";
 
-const BasketItem = ({ id, name, price, imgUrl, amount }) => {
+const BasketItem = ({ item }) => {
+  const basket = useContext(BasketContext);
+  const updateBasket = useContext(UpdateBasketContext);
+
+  const imgUrl = item.product.imgUrl;
+  const name = item.product.title;
+  const quantity = item.amount;
+  const id = item.product.id;
+  const price = item.product.price;
+
+  const removeFromBasket = () => {
+    const newBasket = basket.filter((item) => item.product.id !== id);
+    localStorage.setItem("basket", JSON.stringify(newBasket));
+    updateBasket();
+  };
+
   return (
     <li className="basket-item d-flex align-items-center gap-3 m-3 pb-3">
       <div className="basket-item-image">
@@ -9,10 +27,14 @@ const BasketItem = ({ id, name, price, imgUrl, amount }) => {
       </div>
       <div className="basket-item-details">
         <h4 className="basket-item-name">{name}</h4>
-        <AmountCounter amount={amount} id={id}/>
+        <AmountCounter quantity={quantity} id={id} />
         <div className="d-flex justify-content-between gap-5 pt-3">
-          <span className="basket-item-price">{`${price * amount}FT`}</span>
-          <span id={`remove_${id}`} className="remove">
+          <span className="basket-item-price">{`${price * quantity}FT`}</span>
+          <span
+            id={`remove_${id}`}
+            className="remove"
+            onClick={() => removeFromBasket()}
+          >
             remove
           </span>
         </div>
