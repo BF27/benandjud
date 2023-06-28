@@ -10,6 +10,19 @@ const Basket = () => {
   const [totalPrice, setTotalPrice] = useState(0);
   const basket = useContext(BasketContext);
 
+  useEffect(() => {
+    if (basket) {
+      const basketPrices = basket.map((item) => {
+        const price = item.product.price;
+        const amount = item.amount;
+        return price * amount;
+      });
+      let total = 0;
+      basketPrices.forEach((price) => (total += price));
+      setTotalPrice(total);
+    }
+  }, [basket]);
+
   return (
     <div className="basket d-flex justify-content-center flex-column">
       <header className="basket-header d-flex align-items-center justify-content-end gap-3 ">
