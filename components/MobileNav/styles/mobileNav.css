@@ -18,7 +18,7 @@
   right: 0;
   top: 75%;
   padding: 1rem 0rem;
-  z-index: 10000;
+  z-index: 1000;
 }
 .mobile-nav .mobile-menu .mobile-menu-item {
   transition: all 0.45s ease;
