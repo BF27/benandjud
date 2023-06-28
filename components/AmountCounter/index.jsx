@@ -7,6 +7,13 @@ const AmountCounter = ({ quantity, id }) => {
   const basket = useContext(BasketContext);
   const updateBasket = useContext(UpdateBasketContext);
 
+
+  const removeFromBasket = () => {
+    const newBasket = basket.filter((item) => item.product.id !== id);
+    localStorage.setItem("basket", JSON.stringify(newBasket));
+    updateBasket();
+  };
+
   const handlePlus = () => {
     const newBasket = basket.map((item) => {
       if (item.product.id === id) {
@@ -19,12 +26,19 @@ const AmountCounter = ({ quantity, id }) => {
   };
 
   const handleMinus = () => {
-    const newBasket = basket.map((item) => {
+    let deleteItem = false;
+    let newBasket = basket.map((item) => {
       if (item.product.id === id) {
         item.amount = quantity - 1;
+        if (item.amount <= 0) {
+          deleteItem = true
+        }
       }
       return item;
     });
+    if (deleteItem) {
+      newBasket = newBasket.filter(item => item.product.id !== id)
+    }
     localStorage.setItem("basket", JSON.stringify(newBasket));
     updateBasket();
   }
