@@ -17,7 +17,7 @@
   position: absolute;
   right: 0;
   top: 75%;
-  padding: 2rem 0rem;
+  padding: 1rem 0rem;
   z-index: 10000;
 }
 .mobile-nav .mobile-menu .mobile-menu-item {
@@ -31,10 +31,10 @@
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
-  font-size: 1rem;
+  font-size: 1.5rem;
   transition: 0.45s;
   padding: 0.5rem 1rem;
 }
 .mobile-nav .mobile-menu .mobile-menu-item a:hover {
-  background-color: #fff;
+  text-decoration: underline;
 }/*# sourceMappingURL=mobileNav.css.map */
