@@ -3,7 +3,7 @@ import { BasketContext } from "../../contexts/BasketContext";
 import { UpdateBasketContext } from "../../contexts/UpdateBasketContext";
 import { useContext } from "react";
 
-const AmountCounter = ({ product, quantity, id}) => {
+const AmountCounter = ({ product, quantity, id, reset }) => {
   const basket = useContext(BasketContext);
   const updateBasket = useContext(UpdateBasketContext);
 
@@ -34,6 +34,7 @@ const AmountCounter = ({ product, quantity, id}) => {
       }
       return item;
     });
+
     if (deleteItem) {
       newBasket = newBasket.filter((item) => item.product.id !== id);
     }

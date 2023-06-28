@@ -20,6 +20,8 @@ const BasketItem = ({ item: product }) => {
     updateBasket();
   };
 
+
+
   return (
     <li className="basket-item d-flex align-items-center gap-3 m-3 pb-3">
       <div className="basket-item-image">

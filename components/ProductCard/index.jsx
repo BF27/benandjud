@@ -22,9 +22,10 @@ const ProductCard = ({ product }) => {
         setQuantity(
           basket.filter((prod) => prod.product.id === product.id)[0].amount
         );
+      } else {
+        setQuantity(0);
       }
     }
-
   }, [basket]);
 
   useEffect(() => {
