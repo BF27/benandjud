@@ -68,7 +68,7 @@ const ProductCard = ({ product }) => {
       <p className="product-card-short-description">
         {product.shortDescription}
       </p>
-      <AmountCounter id={product.id} quantity={quantity} />
+      <AmountCounter product={product} id={product.id} quantity={quantity} />
       <span className="product-card-price">{product.price} ft / 250g</span>
       <button
         id={`add-item_${product.id}`}

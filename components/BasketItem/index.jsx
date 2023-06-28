@@ -4,15 +4,15 @@ import { useContext } from "react";
 import { BasketContext } from "../../contexts/BasketContext";
 import { UpdateBasketContext } from "../../contexts/UpdateBasketContext";
 
-const BasketItem = ({ item }) => {
+const BasketItem = ({ item: product }) => {
   const basket = useContext(BasketContext);
   const updateBasket = useContext(UpdateBasketContext);
 
-  const imgUrl = item.product.imgUrl;
-  const name = item.product.title;
-  const quantity = item.amount;
-  const id = item.product.id;
-  const price = item.product.price;
+  const imgUrl = product.product.imgUrl;
+  const name = product.product.title;
+  const quantity = product.amount;
+  const id = product.product.id;
+  const price = product.product.price;
 
   const removeFromBasket = () => {
     const newBasket = basket.filter((item) => item.product.id !== id);
@@ -27,7 +27,7 @@ const BasketItem = ({ item }) => {
       </div>
       <div className="basket-item-details">
         <h4 className="basket-item-name">{name}</h4>
-        <AmountCounter quantity={quantity} id={id} />
+        <AmountCounter product={product} quantity={quantity} id={id} />
         <div className="d-flex justify-content-between gap-5 pt-3">
           <span className="basket-item-price">{`${price * quantity}FT`}</span>
           <span

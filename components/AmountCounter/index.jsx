@@ -3,7 +3,7 @@ import { BasketContext } from "../../contexts/BasketContext";
 import { UpdateBasketContext } from "../../contexts/UpdateBasketContext";
 import { useContext } from "react";
 
-const AmountCounter = ({ quantity, id }) => {
+const AmountCounter = ({product, quantity, id }) => {
   const basket = useContext(BasketContext);
   const updateBasket = useContext(UpdateBasketContext);
 
@@ -15,12 +15,17 @@ const AmountCounter = ({ quantity, id }) => {
   };
 
   const handlePlus = () => {
+    let contains = false;
     const newBasket = basket.map((item) => {
       if (item.product.id === id) {
         item.amount = quantity + 1;
+        contains = true;
       }
       return item;
     });
+    if (!contains) {
+      newBasket.push({product: product, amount: 1});
+    }
     localStorage.setItem("basket", JSON.stringify(newBasket));
     updateBasket();
   };
