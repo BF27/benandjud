@@ -3,6 +3,7 @@ import Shop from "../layout/Shop";
 import About from "../layout/About";
 import Contact from "../layout/Contact";
 import Footer from "../layout/Footer";
+import MessageModal from "../components/MessageModal";
 import { BasketContext } from "../contexts/BasketContext";
 import { UpdateBasketContext } from "../contexts/UpdateBasketContext";
 import { useState } from "react";
@@ -25,6 +26,7 @@ function App() {
           <About />
           <Contact />
           <Footer />
+          <MessageModal />
         </UpdateBasketContext.Provider>
       </BasketContext.Provider>
     </div>

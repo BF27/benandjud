@@ -1,0 +1,14 @@
+@use "../../../styles/variables" as v;
+
+.message-modal {
+  width: 100%;
+  padding: 2rem;
+  
+  //background-color: #ffecbc;
+
+  font-family: v.$fontMontserrat;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #000;
+}

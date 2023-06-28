@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "pp formula";
+  src: url("../fonts/PPFormula-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "groovy-extended";
+  src: url("../fonts/Groovy-Extended.ttf") format("truetype");
+}
+.message-modal {
+  width: 100%;
+  padding: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #000;
+}/*# sourceMappingURL=messageModal.css.map */
