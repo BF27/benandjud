@@ -52,6 +52,7 @@
 .contact div form .form-submit-btn {
   background: #F19BE3;
   border-radius: 2rem;
+  padding: 1rem 1.5rem;
   width: 100%;
   transition: all 0.45s ease;
 }
