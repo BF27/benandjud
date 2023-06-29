@@ -1,0 +1,27 @@
+@use "../../../styles/variables" as v;
+
+  .check-out-btn{
+    .check-out-link {
+      background-color: #f19be3;
+      font-family: v.$fontMontserrat;
+      font-weight: 600;
+      border: 2px solid #f19be3;
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+      border-radius: 100px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: #000;
+      &:hover{
+        border: 2px solid #f19be3;
+        color: #000;
+      }
+
+      .divider{
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        background-color: v.$green;
+      }
+    }
+  }

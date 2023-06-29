@@ -6,7 +6,7 @@
   font-family: "groovy-extended";
   src: url("../fonts/Groovy-Extended.ttf") format("truetype");
 }
-.check-out-btn {
+.check-out-btn .check-out-link {
   background-color: #f19be3;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -15,11 +15,14 @@
   text-transform: uppercase;
   border-radius: 100px;
   transition: all 0.3s ease;
+  text-decoration: none;
+  color: #000;
 }
-.check-out-btn:hover {
+.check-out-btn .check-out-link:hover {
   border: 2px solid #f19be3;
+  color: #000;
 }
-.check-out-btn .divider {
+.check-out-btn .check-out-link .divider {
   height: 0.5rem;
   width: 0.5rem;
   border-radius: 50%;

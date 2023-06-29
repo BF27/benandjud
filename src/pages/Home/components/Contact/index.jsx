@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MessageModal from "../../components/MessageModal";
+import MessageModal from "./components/MessageModal";
 
 import "./styles/contact.css";
 

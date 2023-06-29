@@ -1,7 +1,7 @@
-import Logo from "../Logo";
-import Nav from "../Nav";
-import Basket from "../Basket";
-import MobileNav from "../MobileNav";
+import Logo from "../../../../../../components/Logo"
+import Nav from "./components/Nav"
+import Basket from "./components/Basket";
+import MobileNav from "./components/MobileNav";
 
 import "./styles/topBar.css";
 

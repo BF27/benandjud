@@ -1,8 +1,8 @@
-import AmountCounter from "../AmountCounter";
+import AmountCounter from "../../../../../../../../components/AmountCounter";
 import "./styles/basketItem.css";
 import { useContext } from "react";
-import { BasketContext } from "../../contexts/BasketContext";
-import { UpdateBasketContext } from "../../contexts/UpdateBasketContext";
+import { BasketContext } from "../../../../../../../../contexts/BasketContext";
+import { UpdateBasketContext } from "../../../../../../../../contexts/UpdateBasketContext";
 
 const BasketItem = ({ item: product }) => {
   const basket = useContext(BasketContext);

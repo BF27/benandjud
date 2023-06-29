@@ -1,6 +1,6 @@
-import ProductCard from "../../components/ProductCard";
+import ProductCard from "./components/ProductCard";
 import { useState, useEffect } from "react";
-import { db } from "../../utils/initFirebase";
+import { db } from "../../../../../utils/initFirebase";
 import { collection, getDocs } from "firebase/firestore";
 
 import "./styles/shop.css";

@@ -1,12 +1,11 @@
-import Landing from "../layout/Landing";
-import Shop from "../layout/Shop";
-import About from "../layout/About";
-import Contact from "../layout/Contact";
-import Footer from "../layout/Footer";
-import MessageModal from "../components/MessageModal";
-import { BasketContext } from "../contexts/BasketContext";
-import { UpdateBasketContext } from "../contexts/UpdateBasketContext";
+import { BasketContext } from "./contexts/BasketContext";
+import { UpdateBasketContext } from "./contexts/UpdateBasketContext";
 import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Product from "./pages/Product";
+import Order from "./pages/Order";
+
 
 function App() {
   const [basket, setBasket] = useState(
@@ -21,12 +20,11 @@ function App() {
     <div className="app">
       <BasketContext.Provider value={basket}>
         <UpdateBasketContext.Provider value={() => updateBasket()}>
-          <Landing />
-          <Shop />
-          <About />
-          <Contact />
-          <Footer />
-          <MessageModal />
+          <Routes >
+            <Route path="/" element={<Home />}/>
+            <Route path="/products/:id" element={<Product />} />
+            <Route path="/order" element={<Order />} />
+          </Routes>
         </UpdateBasketContext.Provider>
       </BasketContext.Provider>
     </div>

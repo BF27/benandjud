@@ -1,9 +1,9 @@
-import AmountCounter from "../AmountCounter";
+import AmountCounter from "../../../../../../components/AmountCounter";
 
 import { useEffect, useState, useContext } from "react";
 
-import { BasketContext } from "../../contexts/BasketContext";
-import { UpdateBasketContext } from "../../contexts/UpdateBasketContext";
+import { BasketContext } from "../../../../../../contexts/BasketContext";
+import { UpdateBasketContext } from "../../../../../../contexts/UpdateBasketContext";
 
 import "./styles/productCard.css";
 

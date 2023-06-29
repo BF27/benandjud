@@ -1,5 +1,5 @@
-import HeroSection from "../../components/HeroSection";
-import TopBar from "../../components/TopBar";
+import HeroSection from "./components/HeroSection";
+import TopBar from "./components/TopBar";
 
 import "./styles/landing.css"
 

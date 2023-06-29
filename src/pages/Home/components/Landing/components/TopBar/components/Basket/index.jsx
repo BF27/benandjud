@@ -1,8 +1,8 @@
-import showBasket from "../../src/pages/Home/components/Landing/components/TopBar/components/Basket/controllers/showBasket";
+import showBasket from "./controllers/showBasket";
 import { useEffect, useState, useContext } from "react";
 import BasketItem from "../BasketItem";
-import CheckOutBtn from "../../src/pages/Home/components/Landing/components/TopBar/components/CheckOutBtn";
-import { BasketContext } from "../../contexts/BasketContext";
+import CheckOutBtn from "../../components/CheckOutBtn";
+import { BasketContext } from "../../../../../../../../contexts/BasketContext"
 
 import "./styles/basket.css";
 

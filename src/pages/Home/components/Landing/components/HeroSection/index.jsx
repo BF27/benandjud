@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { ref, getDownloadURL } from "firebase/storage";
-import { storage } from "../../utils/initFirebase";
+import { storage } from "../../../../../../../utils/initFirebase";
 
 import "./styles/heroSection.css";
 
