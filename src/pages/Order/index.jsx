@@ -1,8 +1,17 @@
+import OrderForm from "./components/OrderForm";
+import OrderList from "./components/OrderList";
+
+import "./styles/order.css";
 
 const Order = () => {
   return (
-    <main className="container-fluid p-0;">Order</main>
-  )
-}
+    <main className="order-page container-fluid row">
 
-export default Order
+        <OrderForm />
+        <OrderList />
+
+    </main>
+  );
+};
+
+export default Order;

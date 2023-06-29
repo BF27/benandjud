@@ -23,7 +23,7 @@ function App() {
           <Routes >
             <Route path="/" element={<Home />}/>
             <Route path="/products/:id" element={<Product />} />
-            <Route path="/order" element={<Order />} />
+            <Route path="/checkout" element={<Order />} />
           </Routes>
         </UpdateBasketContext.Provider>
       </BasketContext.Provider>

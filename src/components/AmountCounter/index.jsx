@@ -3,7 +3,7 @@ import { BasketContext } from "../../contexts/BasketContext";
 import { UpdateBasketContext } from "../../contexts/UpdateBasketContext";
 import { useContext } from "react";
 
-const AmountCounter = ({ product, quantity, id, reset }) => {
+const AmountCounter = ({ product, quantity, id}) => {
   const basket = useContext(BasketContext);
   const updateBasket = useContext(UpdateBasketContext);
 

@@ -1,0 +1,66 @@
+@use "../../../../../../styles/variables" as v;
+
+section.order-list-container {
+  background: rgba(241, 155, 227, 0.32);
+  ul.order-list {
+    margin: 0;
+    li {
+      img {
+        width: 100px;
+      }
+      div {
+        h4 {
+          font-family: v.$fontGroovy;
+          text-transform: uppercase;
+          font-size: 1.5rem;
+
+          margin: 0;
+        }
+        span {
+          font-family: v.$fontMontserrat;
+          font-weight: 300;
+          font-size: 1rem;
+          text-transform: uppercase,
+        
+        }
+        
+      }
+    }
+  }
+  .discount {
+    input {
+      border-radius: 2rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      width: 100%;
+
+      background: rgba(241, 155, 227, 0.35);
+
+      border: 2px solid #000;
+
+      &::placeholder {
+        color: #000!important;
+      }
+    }
+    .btn {
+      width: 100%;
+      text-transform: uppercase;
+      font-weight: 600;
+      background-color: v.$pink;
+      border-radius: 2rem;
+      padding: 0.5rem;
+      transition: all .45s ease;
+
+      &:hover {
+        border: 1px solid v.$pink;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .bold-text {
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "pp formula";
+  src: url("../fonts/PPFormula-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "groovy-extended";
+  src: url("../fonts/Groovy-Extended.ttf") format("truetype");
+}
+section.order-list-container {
+  background: rgba(241, 155, 227, 0.32);
+}
+section.order-list-container ul.order-list {
+  margin: 0;
+}
+section.order-list-container ul.order-list li img {
+  width: 100px;
+}
+section.order-list-container ul.order-list li div h4 {
+  font-family: "groovy-extended", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin: 0;
+}
+section.order-list-container ul.order-list li div span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+section.order-list-container .discount input {
+  border-radius: 2rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  background: rgba(241, 155, 227, 0.35);
+  border: 2px solid #000;
+}
+section.order-list-container .discount input::-moz-placeholder {
+  color: #000 !important;
+}
+section.order-list-container .discount input::placeholder {
+  color: #000 !important;
+}
+section.order-list-container .discount .btn {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #F19BE3;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  transition: all 0.45s ease;
+}
+section.order-list-container .discount .btn:hover {
+  border: 1px solid #F19BE3;
+  background-color: transparent;
+}
+section.order-list-container .bold-text {
+  font-weight: 600;
+}/*# sourceMappingURL=orderList.css.map */
