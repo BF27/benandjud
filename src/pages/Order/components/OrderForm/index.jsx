@@ -1,4 +1,4 @@
-import "./styles/OrderForm.css";
+import "./styles/orderForm.css";
 const OrderForm = () => {
   return (
     <section className="order-form-container col">
