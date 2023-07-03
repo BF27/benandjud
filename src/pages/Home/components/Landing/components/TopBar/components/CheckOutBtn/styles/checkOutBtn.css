@@ -6,6 +6,10 @@
   font-family: "groovy-extended";
   src: url("../fonts/Groovy-Extended.ttf") format("truetype");
 }
+.check-out-btn {
+  background: transparent;
+  border: none;
+}
 .check-out-btn .check-out-link {
   background-color: #f19be3;
   font-family: "Montserrat", sans-serif;
@@ -21,6 +25,7 @@
 .check-out-btn .check-out-link:hover {
   border: 2px solid #f19be3;
   color: #000;
+  background: none;
 }
 .check-out-btn .check-out-link .divider {
   height: 0.5rem;

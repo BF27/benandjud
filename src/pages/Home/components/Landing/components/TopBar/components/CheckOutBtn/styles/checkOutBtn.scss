@@ -1,6 +1,8 @@
-@use "../../../styles/variables" as v;
+@use "../../../../../../../../../../styles/variables" as v;
 
   .check-out-btn{
+    background: transparent;
+    border: none;
     .check-out-link {
       background-color: #f19be3;
       font-family: v.$fontMontserrat;
@@ -15,6 +17,7 @@
       &:hover{
         border: 2px solid #f19be3;
         color: #000;
+        background: none;
       }
 
       .divider{

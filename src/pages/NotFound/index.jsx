@@ -1,7 +1,8 @@
+import Logo from "../../components/Logo";
+
 import { Link } from "react-router-dom";
 
 import "./styles/NotFound.css";
-import Logo from "../../components/Logo";
 
 const NotFound = () => {
   return (
