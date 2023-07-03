@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const UserDetails = ({ changeBox, changeUserData, userData }) => {
-
+  
   function handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -39,7 +39,7 @@ const UserDetails = ({ changeBox, changeUserData, userData }) => {
         <legend>Shipping Address</legend>
 
         <div className="d-flex gap-1">
-          <label htmlFor="input-first-name">
+          <label htmlFor="input-first-name" className="container-fluid p-0 m-0">
             <input
               type="text"
               id="input-first-name"
@@ -49,7 +49,7 @@ const UserDetails = ({ changeBox, changeUserData, userData }) => {
               defaultValue={userData ? userData["first-name"] : ""}
             />
           </label>
-          <label htmlFor="input-last-name">
+          <label htmlFor="input-last-name" className="container-fluid p-0 m-0">
             <input
               type="text"
               id="input-last-name"

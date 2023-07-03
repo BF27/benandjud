@@ -2,12 +2,13 @@ import "./styles/orderList.css";
 import { useContext, useState, useEffect } from "react";
 import { BasketContext } from "../../../../contexts/BasketContext";
 import OrderListItem from "./components/OrderListItem";
+import { ShippingPriceContext } from "../../context/ShippingContext";
 
 const OrderList = () => {
   const basket = useContext(BasketContext);
 
   const [subtotal, setSubtotal] = useState(0);
-  const [shipping, setShipping] = useState(0);
+  const shipping = useContext(ShippingPriceContext);
   const [total, setTotal] = useState(0);
 
   useEffect(() => {

@@ -1,4 +1,23 @@
+import { useContext, useEffect, useState } from "react";
+import { ChangeSippingPriceContext } from "../../../../context/ShippingContext";
+
 const ShippingInfo = ({ changeBox, userData }) => {
+  const [shippingCost, setShippingCost] = useState(0);
+
+  const changeShipping = useContext(ChangeSippingPriceContext);
+
+  useEffect(() => {
+    if (userData.city === "budapest") {
+      setShippingCost(1200);
+    } else {
+      setShippingCost(800);
+    }
+  }, []);
+
+  useEffect(()=> {
+    changeShipping(shippingCost);
+  }, [shippingCost])
+
   return (
     <div className="container d-flex flex-column gap-3">
       <div className="info d-flex flex-column gap-3">
@@ -20,10 +39,12 @@ const ShippingInfo = ({ changeBox, userData }) => {
         </div>
         <div className="d-flex justify-content-between">
           <span className="bold">Shipping cost</span>
-          <span>1200FT</span>
+          <span>{`${shippingCost}FT`}</span>
         </div>
         <div className="d-flex align-items-center justify-content-between">
-          <span className="back" onClick={() => changeBox(false)}>Return To Information</span>
+          <span className="back" onClick={() => changeBox(false)}>
+            Return To Information
+          </span>
           <button className="btn">order</button>
         </div>
       </div>
