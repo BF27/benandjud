@@ -1,0 +1,13 @@
+@use "../../../../styles/variables" as v;
+
+.order-sent {
+  height: 100vh;
+  width: 100%;
+  background-color: v.$green;
+  a{
+    color: #000;
+    &:hover {
+      text-transform: none;
+    }
+  }
+}
