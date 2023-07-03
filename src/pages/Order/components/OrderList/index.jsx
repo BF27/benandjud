@@ -21,8 +21,8 @@ const OrderList = () => {
   }, [shipping, subtotal]);
 
   return (
-    <section className="order-list-container col d-flex flex-column align-items-justify-content-center ">
-      <div className="section-container">
+    <section className="order-list-container col d-flex flex-column align-items-center justify-content-center ">
+      <div className="section-container container container-fluid">
         <div className="container-fluid d-flex flex-column justify-content-center align-items-start gap-4 p-0">
           <header></header>
           <ul className="order-list container p-0 d-flex flex-column gap-3">

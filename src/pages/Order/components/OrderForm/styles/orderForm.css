@@ -8,4 +8,70 @@
 }
 .order-form-container {
   background-color: #CBE765;
+}
+.order-form-container .logo {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.order-form-container .bold {
+  font-weight: 700;
+}
+.order-form-container .back {
+  text-decoration: underline;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.order-form-container .back:hover {
+  text-decoration: none;
+}
+.order-form-container form, .order-form-container .info {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: 3px solid #000;
+  background: rgba(217, 217, 217, 0);
+  box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.25);
+}
+.order-form-container legend {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.order-form-container input[type=email] {
+  text-transform: lowercase;
+}
+.order-form-container input[type=email], .order-form-container input[type=text], .order-form-container select {
+  width: 100%;
+}
+.order-form-container input, .order-form-container select {
+  border: 2px solid #000;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: #E8F4BA;
+  text-transform: capitalize;
+}
+.order-form-container input::-moz-placeholder, .order-form-container select::-moz-placeholder {
+  color: #000000;
+}
+.order-form-container input::placeholder, .order-form-container select::placeholder {
+  color: #000000;
+}
+.order-form-container a {
+  color: #000;
+  text-transform: uppercase;
+}
+.order-form-container a:hover {
+  text-decoration: none;
+}
+.order-form-container .btn {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  background-color: #F19BE3;
+  border: 2px solid #F19BE3;
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.45s ease;
+}
+.order-form-container .btn:hover {
+  background-color: transparent;
 }/*# sourceMappingURL=orderForm.css.map */
