@@ -29,11 +29,11 @@ function App() {
       <BasketContext.Provider value={basket}>
         <UpdateBasketContext.Provider value={() => updateBasket()}>
           <Routes >
-            <Route path="*" element={<NotFound />} />
             <Route path="/" element={<Home />}/>
             <Route path="/products/:id" element={<Product />} />
             <Route path="/checkout" element={<Order />} />
             <Route path="/checkout/done" element={<OrderSent />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </UpdateBasketContext.Provider>
       </BasketContext.Provider>
