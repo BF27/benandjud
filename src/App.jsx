@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
 import Order from "./pages/Order";
+import NotFound from "./pages/NotFound";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <BasketContext.Provider value={basket}>
         <UpdateBasketContext.Provider value={() => updateBasket()}>
           <Routes >
+            <Route path="*" element={<NotFound />} />
             <Route path="/" element={<Home />}/>
             <Route path="/products/:id" element={<Product />} />
             <Route path="/checkout" element={<Order />} />

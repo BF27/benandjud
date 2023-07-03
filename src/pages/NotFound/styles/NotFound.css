@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "pp formula";
+  src: url("../fonts/PPFormula-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "groovy-extended";
+  src: url("../fonts/Groovy-Extended.ttf") format("truetype");
+}
+.not-found {
+  height: 100vh;
+  width: 100%;
+  background-color: #CBE765;
+}
+.not-found div {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.not-found a {
+  color: #000;
+}
+.not-found a:hover {
+  text-decoration: none;
+}
+.not-found .logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=NotFound.css.map */
