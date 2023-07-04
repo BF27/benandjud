@@ -23,25 +23,20 @@ const OrderList = () => {
 
   return (
     <section className="order-list-container col d-flex flex-column align-items-center justify-content-center ">
-      <div className="section-container container container-fluid">
+      <div className="section-container container container-fluid p-0 py-4">
         <div className="container-fluid d-flex flex-column justify-content-center align-items-start gap-4 p-0">
-          <header></header>
           <ul className="order-list container p-0 d-flex flex-column gap-3">
             {basket.map((item, index) => (
               <OrderListItem key={index} product={item} />
             ))}
           </ul>
 
-          <div className="discount container-fluid p-0 row-md d-flex flex-column  flex-md-row align-items-center justify-content-center gap-3">
-            <input
-              type="text"
-              placeholder="gift card / discount"
-              className="col-md"
-            />
+          {/* <div className="discount container-fluid p-0 row-md d-flex flex-column  flex-md-row align-items-center justify-content-center gap-3">
+            <input type="text" placeholder="coupon" className="col-md" />
             <button type="button" className="btn col-md">
               Apply
             </button>
-          </div>
+          </div> */}
           <div className="order-sum d-flex flex-column ">
             <span>{`Subtotal: ${subtotal}FT`}</span>
             <span>{`Shipping: ${shipping}FT`}</span>

@@ -29,8 +29,8 @@ const OrderForm = () => {
       className="order-form-container col d-flex align-items-center
     justify-content-center"
     >
-      <div className="section-container container">
-        <div className="container-fluid">
+      <div className="section-container container p-0 py-4">
+        <div className="container-fluid p-0">
           <header className="d-flex align-items-center justify-content-center">
             <Logo />
           </header>

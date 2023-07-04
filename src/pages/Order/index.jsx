@@ -15,7 +15,7 @@ const Order = () => {
   };
 
   return (
-    <main className="order-page container-fluid row">
+    <main className="order-page container-fluid row d-flex flex-column flex-md-row">
       <ShippingPriceContext.Provider value={shippingPrice}>
         <ChangeSippingPriceContext.Provider value={changeShippingPrice}>
           <OrderForm />

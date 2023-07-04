@@ -1,4 +1,4 @@
-@use "../../../styles/variables" as v;
+@use "../../../../../../styles/variables" as v;
 
 .contact {
   background-color: v.$green;
@@ -46,6 +46,9 @@
         padding: 1rem 1.5rem;
         width: 100%;
         transition: all 0.45s ease;
+
+        font-family: v.$fontMontserrat;
+        font-weight: 600;
 
         &:hover {
           background: transparent;

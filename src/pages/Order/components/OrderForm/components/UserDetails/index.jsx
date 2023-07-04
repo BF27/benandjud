@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const UserDetails = ({ changeBox, changeUserData, userData }) => {
-  
   function handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -18,7 +17,7 @@ const UserDetails = ({ changeBox, changeUserData, userData }) => {
 
   return (
     <form
-      className="address-form container d-flex flex-column gap-3"
+      className="address-form container d-flex flex-column gap-3 p-4"
       onSubmit={(e) => handleSubmit(e)}
     >
       <fieldset className="d-flex flex-column gap-2">
@@ -33,12 +32,22 @@ const UserDetails = ({ changeBox, changeUserData, userData }) => {
             defaultValue={userData ? userData.email : ""}
           />
         </label>
+        <label htmlFor="input-phone">
+          <input
+            type="text"
+            name="phone"
+            id="input-phone"
+            placeholder="phone"
+            required={true}
+            defaultValue={userData ? userData.phone : ""}
+          />
+        </label>
       </fieldset>
 
       <fieldset className="d-flex flex-column gap-2">
         <legend>Shipping Address</legend>
 
-        <div className="d-flex gap-1">
+        <div className="d-flex flex-column flex-sm-row gap-1">
           <label htmlFor="input-first-name" className="container-fluid p-0 m-0">
             <input
               type="text"
@@ -60,13 +69,7 @@ const UserDetails = ({ changeBox, changeUserData, userData }) => {
             />
           </label>
         </div>
-        <div className="d-flex gap-1">
-          <select name="city" id="city-select" required={true}>
-            <option value="">- Choose City -</option>
-            <option value="budapest">budapest</option>
-            <option value="debrecen">debrecen</option>
-            <option value="pécs">pécs</option>
-          </select>
+        <div className="d-flex flex-column flex-sm-row gap-1">
           <label htmlFor="input-zip">
             <input
               type="text"
@@ -77,6 +80,12 @@ const UserDetails = ({ changeBox, changeUserData, userData }) => {
               defaultValue={userData ? userData.zip : ""}
             />
           </label>
+          <select name="city" id="city-select" required={true}>
+            <option value="">- Choose City -</option>
+            <option value="budapest">budapest</option>
+            <option value="debrecen">debrecen</option>
+            <option value="pécs">pécs</option>
+          </select>
         </div>
         <label htmlFor="input-address-1">
           <input
@@ -97,22 +106,13 @@ const UserDetails = ({ changeBox, changeUserData, userData }) => {
             defaultValue={userData ? userData.address2 : ""}
           />
         </label>
-        <label htmlFor="input-phone">
-          <input
-            type="text"
-            name="phone"
-            id="input-phone"
-            placeholder="phone"
-            required={true}
-            defaultValue={userData ? userData.phone : ""}
-          />
-        </label>
       </fieldset>
+
       <label htmlFor="input-save" className="d-flex gap-3">
         <input type="checkbox" name="save" id="input-save" value="save" />
         Save this information for next time
       </label>
-      <div className="d-flex align-items-center justify-content-between">
+      <div className="d-flex flex-column-reverse flex-md-row align-items-center justify-content-between">
         <Link to="/">Return to the shop</Link>
         <button className="btn">Continue To Shipping</button>
       </div>

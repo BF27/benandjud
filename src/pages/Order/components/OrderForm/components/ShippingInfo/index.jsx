@@ -34,28 +34,28 @@ const ShippingInfo = ({ changeBox, userData }) => {
     return (
       <div className="container d-flex flex-column gap-3">
         <div className="info d-flex flex-column gap-3">
-          <div className="d-flex justify-content-between">
+          <div className="d-flex flex-column flex-lg-row align-items-center align-items-lg-start justify-content-lg-between">
             <span className="bold">contact</span>
-            <div className="d-flex flex-column align-items-end">
+            <div className="d-flex flex-column align-items-center align-items-lg-end ">
               <span>{userData.email}</span>
               <span>{userData.phone}</span>
             </div>
           </div>
-          <div className="d-flex align-items-start justify-content-between">
-            <span className="bold">ship to</span>
-            <div className="d-flex flex-column align-items-end">
+          <div className="d-flex flex-column flex-lg-row align-items-center align-items-lg-start justify-content-lg-between">
+            <span className="bold">shipping address</span>
+            <div className="d-flex  flex-column align-items-center align-items-lg-end">
               <span>{`${userData["first-name"]} ${userData["last-name"]}`}</span>
               <span>{`${userData.zip}, ${userData.city}`}</span>
               <span>{userData.address}</span>
               {userData.address2 && <span>{userData.address2}</span>}
             </div>
           </div>
-          <div className="d-flex justify-content-between">
+          <div className="d-flex flex-column flex-lg-row align-items-center align-items-lg-start justify-content-lg-between">
             <span className="bold">Shipping cost</span>
             <span>{`${shippingCost}FT`}</span>
           </div>
-          <div className="d-flex align-items-center justify-content-between">
-            <span className="back" onClick={() => changeBox(false)}>
+          <div className="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-lg-between">
+            <span className="back text-center text-lg-left" onClick={() => changeBox(false)}>
               Return To Information
             </span>
             <button className="btn" onClick={() => sendOrder()}>
