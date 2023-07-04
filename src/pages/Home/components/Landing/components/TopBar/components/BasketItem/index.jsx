@@ -23,7 +23,7 @@ const BasketItem = ({ item: product }) => {
 
 
   return (
-    <li className="basket-item d-flex align-items-center gap-3 m-3 pb-3">
+    <li className="basket-item d-flex align-items-center justify-content-between gap-3 pb-3">
       <div className="basket-item-image d-none d-sm-block">
         <img src={imgUrl} alt="product" />
       </div>
