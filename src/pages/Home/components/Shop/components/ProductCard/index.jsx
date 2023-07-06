@@ -69,9 +69,8 @@ const ProductCard = ({ product }) => {
       <p className="product-card-short-description d-none d-sm-block">
         {product.shortDescription}
       </p>
-      <AmountCounter product={product} id={product.id} quantity={quantity} />
       <span className="product-card-price">{product.price} ft / 250g</span>
-      <button
+      {quantity ?<AmountCounter product={product} id={product.id} quantity={quantity} /> :  <button
         id={`add-item_${product.id}`}
         className="btn product-card-button"
         onClick={() => {
@@ -79,7 +78,9 @@ const ProductCard = ({ product }) => {
         }}
       >
         Add to cart
-      </button>
+      </button>}
+      
+      
     </div>
   );
 };
